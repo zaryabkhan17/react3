@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Temp() {
+  const [value, setValue] = useState(0);
+  function Increase() {
+    setValue((Incraese) => {
+      return Incraese + 1
+    })
+  
+}
+
+function Decrease() {
+  setValue((Decrease) => {
+    return Decrease -1
+  })
+}
+return(
+  <div><button onClick={Increase}>+++++++</button>
+  <h1>{value}</h1>
+  <button onClick={Decrease}>---------</button>
+  </div>
+)
+}
+ReactDOM.render(<Temp/>, document.querySelector('#root'));
