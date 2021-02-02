@@ -18,9 +18,9 @@ function Decrease() {
   })
 }
 return(
-  <div><button onClick={Increase}>+++++++</button>
-  <h1>{value}</h1>
-  <button onClick={Decrease}>---------</button>
+  <div><button className="ibut" onClick={Increase}><h1>+++++++</h1></button>
+  <h1 className="val">{value}</h1>
+  <button className="dbut" onClick={Decrease}><h1>---------</h1></button>
   </div>
 )
 }
